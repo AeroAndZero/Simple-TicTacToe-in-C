@@ -80,11 +80,7 @@ void display(char match[size][size]){
         }
         printf("\n-------------\n");
     }
-}
-
-void invalidChoice(){
-    printf("Invalid Value Entered.\nEnter Values Again.");
-    sleep(1);
+    printf("\t\b\bEnter Values Like This : Row Column\n");
 }
 
 void main(){
@@ -102,13 +98,13 @@ void main(){
         display(match);
 
         if(currentPlayer == 1){
-            printf("\nEnter Value For Player 1 (row colum) : ");
+            printf("\nEnter Value For Player 1 (o) : ");
             scanf("%d %d",&xin,&yin);
-            xin - 1 < size && yin - 1 < size && match[xin - 1][yin - 1] == ' ' ? match[xin - 1][yin - 1] = 'o',currentPlayer = 2,totalAttemps += 1 : invalidChoice();
+            xin - 1 < size && yin - 1 < size && match[xin - 1][yin - 1] == ' ' ? match[xin - 1][yin - 1] = 'o',currentPlayer = 2,totalAttemps += 1 : (printf("Invalid Value Entered.\nEnter Values Again."),sleep(1));
         }else{
-            printf("\nEnter Value For Player 2 (row colum) : ");
+            printf("\nEnter Value For Player 2 (x) : ");
             scanf("%d %d",&xin,&yin);
-            xin - 1 < size && yin - 1 < size && match[xin - 1][yin - 1] == ' ' ? match[xin - 1][yin - 1] = 'x',currentPlayer = 1,totalAttemps += 1 : invalidChoice();
+            xin - 1 < size && yin - 1 < size && match[xin - 1][yin - 1] == ' ' ? match[xin - 1][yin - 1] = 'x',currentPlayer = 1,totalAttemps += 1 : (printf("Invalid Value Entered.\nEnter Values Again."),sleep(1));
         }
 
         checkFunction = check(match);
