@@ -12,12 +12,3 @@
 #  programing language
 ### C  language:
 >C programming is a general-purpose, procedural, imperative computer programming language.
-
-
-# Created by :
-***👨🏻‍💻Ayush Thakur***
-
-
-
-
-**Free Software, Hell Yeah!**
